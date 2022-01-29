@@ -1,17 +1,22 @@
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 
 public class CreateContact_PhoneBook_UC1 {
 
     // linked list created
 
-    private LinkedList<PersonDetails> memberContacts = new LinkedList<>();
+    //private LinkedList<PersonDetails> memberContacts = new LinkedList<>();
+    static Map<ContactDetails, PersonDetails> memberContacts = new HashMap<>();
 
-    // method to add member details in Linkedlist
+
+    // method to add member details in Hashmap
 
     public void addMemberContactDetails(String firstName, String lastName, String address, String mobileNumber, String landlineNo, String email) {
         PersonDetails member = new PersonDetails(firstName,lastName,address,mobileNumber,landlineNo,email);
-        memberContacts.add(member);
+        ContactDetails contactDetails=new ContactDetails( mobileNumber, landlineNo);
+        memberContacts.put(contactDetails,member);
         System.out.println("Hurray ! member added");
         display(member);
     }
