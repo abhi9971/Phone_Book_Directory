@@ -1,4 +1,39 @@
 public class PersonDetails {
+    public PersonDetails() {
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public void setMobileNumber(String mobileNumber) {
+        this.mobileNumber = mobileNumber;
+    }
+
+    public String getLandlineNo() {
+        return landlineNo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     String firstName;
     String lastName;
     String address;
